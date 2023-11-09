@@ -1,3 +1,12 @@
-document.getElementById('button').onclick = function() {
-  document.getElementById('body__logos__hidden-9', 'body__logos__hidden-10', 'body__logos__hidden-11').hidden = true;
-}
+
+
+function myFunction() {
+  var moreLogos = document.getElementById("body__logos__hidden");
+  var btn = document.getElementById("Btn");
+
+  if (btn.innerHTML = "Показать все") {
+    body__logos__hidden.display = "none";
+  } 
+  if (btn.innerHTML = "Скрыть") 
+    body__logos__hidden.display = "inLine";
+  }

@@ -26,7 +26,17 @@ body {
 
 .button {
     padding-left: 20px;
-    font-family: ;
+    border: none;
+    background-color: #F8F8F8;
+    cursor: pointer;
+    
 }
 
+.arrow-down {
+    padding-right: 10px;
+}
 
+#body__logos__hidden {
+    display: none;
+  }
+  
