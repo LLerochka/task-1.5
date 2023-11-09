@@ -1,0 +1,32 @@
+body {
+    background-color: #F8F8F8;
+}
+
+.header {
+    padding: 20px;
+    background: linear-gradient(to right, #F8F8F8, #FFFFFF);
+    border-top: solid 2px #D9FFF5;
+    font-family: ;
+}
+
+.body {
+    padding-top: 25px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+}
+
+.body__logos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 2500;
+    row-gap: 10px;
+    column-gap: 20px;
+}
+
+.button {
+    padding-left: 20px;
+    font-family: ;
+}
+
+
