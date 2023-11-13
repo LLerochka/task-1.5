@@ -7,15 +7,16 @@ body {
     background: linear-gradient(to right, #F8F8F8, #FFFFFF);
     border-top: solid 2px #D9FFF5;
     font-family: ;
+
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-right: 15px;
 }
 
 .body {
     padding-top: 25px;
     padding-bottom: 30px;
     padding-left: 20px;
-}
-
-.body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -38,9 +39,26 @@ body {
 }
 
 .body__logo {
-    display: block;
+    display: flex;
 }
 
-.hidden {
-    display: none !important;
+
+
+@media screen and (min-width: 1120px) {
+    .body__logo__show {
+        display: flex;
+    }
+    .body__logo__hidden {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .body__logo__show {
+        display: none;
+    }
+    .body__logo__hidden {
+        display: none;
+    }
 }

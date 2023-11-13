@@ -1,4 +1,4 @@
-const btn = document.querySelector('.btn')
+/*const btn = document.querySelector('.btn')
 const logos = Array.from(document.querySelectorAll('.body__logo'));
 
 
@@ -20,7 +20,7 @@ function response1() {
       if (index <= 7) {
         item.classList.remove('hidden')
       } else if (index > 7) {
-        //btn.classList.remove('hidden');
+        btn.classList.remove('hidden');
       }
       openCatalog()
     })
