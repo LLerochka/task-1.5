@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,173 +11,113 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
+
 <body>
 
     <div class="header">Ремонт различных брендов</div>
 
-    <div class="body" id="swiper-wrapper-a52a09915beda752" aria-live="polite">
-            <div class="body__logo"><img src="images/cat1.svg" alt=""></div>
-            <div class="body__logo"><img src="images/cat2.svg" alt=""></div>
-            <div class="body__logo"><img src="images/cat3.svg" alt=""></div>
-            <div class="body__logo"><img src="images/cat4.svg" alt=""></div>
-            <div class="body__logo"><img src="images/cat5.svg" alt=""></div>
-            <div class="body__logo"><img src="images/cat6.svg" alt=""></div>
-            <div class="body__logo body__logo__show"><img src="images/cat7.svg" alt=""></div>
-            <div class="body__logo body__logo__show"><img src="images/cat8.svg" alt=""></div>
-            <div class="body__logo body__logo__hidden"><img src="images/cat6.svg" alt=""></div>
-            <div class="body__logo body__logo__hidden"><img src="images/cat7.svg" alt=""></div>
-            <div class="body__logo body__logo__hidden"><img src="images/cat8.svg" alt=""></div>
+    <div class="body">
+        <div class="body__logo body__logo-shown"><img src="images/cat1.svg" alt=""></div>
+        <div class="body__logo body__logo-shown"><img src="images/cat2.svg" alt=""></div>
+        <div class="body__logo body__logo-shown"><img src="images/cat3.svg" alt=""></div>
+        <div class="body__logo body__logo-shown"><img src="images/cat4.svg" alt=""></div>
+        <div class="body__logo body__logo-shown"><img src="images/cat5.svg" alt=""></div>
+        <div class="body__logo body__logo-shown"><img src="images/cat6.svg" alt=""></div>
+        <div class="body__logo body__logo-shown"><img src="images/cat7.svg" alt=""></div>
+        <div class="body__logo body__logo-shown"><img src="images/cat8.svg" alt=""></div>
+        <div class="body__logo body__logo-hidden"><img src="images/cat6.svg" alt=""></div>
+        <div class="body__logo body__logo-hidden"><img src="images/cat7.svg" alt=""></div>
+        <div class="body__logo body__logo-hidden"><img src="images/cat8.svg" alt=""></div>
     </div>
 
-    <button class="btn" type="button" id="btn"><img class="arrow-down" src="images/arrow-down.svg" alt="" style="transform: rotate(180deg);">Показать всем</button>
+    <button class="btn" type="button" id="btn">
+        <img class="arrow-down" src="images/arrow-down.svg" alt="">
+        Показать все
+    </button>
 
 
-    <!--<script>
-        window.addEventListener('DOMContentLoaded', handle);
-        const width = window.innerWidth;
+    <script>
+   // window.addEventListener('DOMContentLoaded', handle);
+       const width = window.innerWidth;
 
-        new Swiper('.swiper', {
-            direction: 'horizontal',
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1.2,
-                },
-                520: {
-                    slidesPerView: 2.2
-                },
-                768: {
-                    enabled: false,
-                    classes: '.swiper-wrapper, .swiper-slide',
-                    disableOnBreakpoint: true
-                }
-            },
-            dynamicBullets: true
-        });
+        // new Swiper('.swiper', {
+        //     direction: 'horizontal',
+        //     pagination: {
+        //         el: '.swiper-pagination',
+        //         clickable: true,
+        //     },
+        //     breakpoints: {
+        //         320: {
+        //             slidesPerView: 1.2,
+        //         },
+        //         520: {
+        //             slidesPerView: 2.2
+        //         },
+        //         768: {
+        //             enabled: false,
+        //             classes: '.swiper-wrapper, .swiper-slide',
+        //             disableOnBreakpoint: true
+        //         }
+        //     },
+        //     dynamicBullets: true
+        // });
 
-        function handle() {
-            const swiperElements = document.querySelectorAll('.swiper, .swiper-slide, .swiper-wrapper, .swiper-slide-active, .swiper-slide-next');
-            const logos = document.querySelectorAll('.body__logo');
+        // function handle() {
+        //     const swiperElements = document.querySelectorAll('.swiper, .swiper-slide, .swiper-wrapper, .swiper-slide-active, .swiper-slide-next');
+        //     const logos = document.querySelectorAll('.body__logo');
 
-            if(width >= 768) {
-                const swiper = document.querySelector('.swiper');
-                const innerSwiper = swiper.firstElementChild;
-                swiper.parentNode.replaceChild(innerSwiper, swiper);
+        //     if(width >= 768) {
+        //         const swiper = document.querySelector('.swiper');
+        //         const innerSwiper = swiper.firstElementChild;
+        //         swiper.parentNode.replaceChild(innerSwiper, swiper);
 
-                swiperElements.forEach(el => {
-                    el.classList.remove('swiper-slide');
-                    el.classList.remove('swiper-wrapper');
-                });
+        //         swiperElements.forEach(el => {
+        //             el.classList.remove('swiper-slide');
+        //             el.classList.remove('swiper-wrapper');
+        //         });
 
-                logos.forEach(item => {
-                    const outerDiv = item.closest("[role=\"group\"]");
-                    const innerDiv = outerDiv.firstElementChild;
+        //         logos.forEach(item => {
+        //             const outerDiv = item.closest("[role=\"group\"]");
+        //             const innerDiv = outerDiv.firstElementChild;
 
-                    outerDiv.parentNode.replaceChild(innerDiv, outerDiv);
-                });
-            }
-        }
+        //             outerDiv.parentNode.replaceChild(innerDiv, outerDiv);
+        //         });
+        //     }
+        // }
 
-        const toggleBtn = document.getElementById('btn');
+
+
+
+
+       const toggleBtn = document.getElementById('btn');
+       const bodyLogo = document.getElementsByClassName('.body__logo')
+       const arrow = document.getElementsByClassName('.arrow-down')
+       const bodyLogoHidden = document.getElementsByClassName('.body__logo-hidden')
 
         toggleBtn.addEventListener('click', () => {
-            const brands = width < 1120
-            ? document.querySelectorAll('.body__logo__hidden, .body__logo__show')
-            : document.querySelectorAll('.body__logo__hidden')
-            const toggleBtn = document.getElementById('btn'); //
+            console.log("Clicked....111", (toggleBtn.innerText).trim() === 'Показать все');
+            console.log("Clicked....222", (toggleBtn.innerText));
+            const body = width < 1120
+                ? document.querySelectorAll('.body__logo-shown, .body__logo-hidden')
+                : document.querySelectorAll('.body__logo-shown, .body__logo-hidden');
 
-            if (toggleBtn.innerText === 'Показать все') {
-                brands.forEach(brand => brand.style.display = 'flex');
-
+            if ((toggleBtn.innerText).trim() === 'Показать все') {
+                bodyLogoHidden.forEach(bodyLogoHidden => bodyLogoHidden.style.display = 'flex');
                 toggleBtn.innerText = 'Скрыть';
-
-                toggleBtn.style.transform = 'rotate(180deg)';
+                arrow.style.transform = 'rotate(180deg)';
             } else if (toggleBtn.innerText === 'Скрыть') {
-                brands.forEach(brand => brand.style.display = 'none');
-
+                bodyLogoHidden.forEach(bodyLogoHidden => bodyLogoHidden.style.display = 'none');
                 toggleBtn.innerText = 'Показать все';
-            } //
-        });
-    </script>
-
-<script>
-
-window.addEventListener('DOMContentLoaded', handle);
-    const width = window.innerWidth;
-
-    new Swiper('.swiper', {
-        direction: 'horizontal',
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1.2,
-            },
-            520: {
-                slidesPerView: 2.2,
-            },
-            768: {
-                enabled: false,
-                classes: '.swiper-wrapper, .swiper-slide',
-                disableOnBreakpoint: true
+                arrow.style.transform = 'rotate(180deg)'
             }
-        },
-        dynamicBullets: true
-    });
+       });
 
-    function handle() {
-        const swiperElements = document.querySelectorAll('.swiper, .swiper-slide, .swiper-wrapper, .swiper-slide-active, .swiper-slide-next');
-        const innerItems = document.querySelectorAll('.brand-repair__inner__item');
+   </script>
 
-        if(width >= 768) {
-            const swiper = document.querySelector('.swiper');
-            const innerSwiper = swiper.firstElementChild;
-            swiper.parentNode.replaceChild(innerSwiper, swiper);
 
-            swiperElements.forEach(el => {
-                el.classList.remove('swiper-slide');
-                el.classList.remove('swiper-wrapper');
-            });
-
-            innerItems.forEach(item => {
-               const outerDiv = item.closest("[role=\"group\"]");
-               const innerDiv = outerDiv.firstElementChild;
-
-               outerDiv.parentNode.replaceChild(innerDiv, outerDiv);
-            });
-        }
-    }
-
-    const toggleBrandsButton = document.getElementById('toggle_brands');
-
-    toggleBrandsButton.addEventListener('click', () => {
-        const brands = width < 1120
-                ? document.querySelectorAll('.brand-repair__inner__item__hidden, .brand-repair__inner__item__show-1120')
-                : document.querySelectorAll('.brand-repair__inner__item__hidden')
-        const toggleIcon = document.getElementById('toggle_icon');
-
-        if (toggleBrandsButton.innerText === 'Показать всё') {
-            brands.forEach(brand => brand.style.display = 'flex');
-
-            toggleBrandsButton.innerText = 'Скрыть';
-
-            toggleIcon.style.transform = 'rotate(180deg)';
-        } else if (toggleBrandsButton.innerText === 'Скрыть') {
-            brands.forEach(brand => brand.style.display = 'none');
-
-            toggleBrandsButton.innerText = 'Показать всё';
-
-            toggleIcon.style.transform = '';
-        }
-    });
-</script>
 
 
 
 </body>
+
 </html>
